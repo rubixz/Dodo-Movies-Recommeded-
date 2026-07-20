@@ -43,7 +43,7 @@ The app will open in your browser at http://localhost:8501 .
 🖍 Usage
 1. Select or type a movie title from the dropdown.
 2. Click “Show Recommendation”.
-3. View 5 similar movies along with their posters.
+3. View 10 similar movies along with their posters.
    
 🗒 Notes:
 This project uses TMDB’s API to fetch movie posters — an active internet connection is
