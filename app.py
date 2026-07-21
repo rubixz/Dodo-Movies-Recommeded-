@@ -99,7 +99,7 @@ def show_movie_popup(movie_id, movie_title):
         if details["genres"]:
             st.markdown(f"**Genre:** {', '.join(details['genres'])}")
 
-        st.markdown("---")        
+       ## st.markdown("---")        
 
         # 3. Cast
         if credits["cast"]:
@@ -107,10 +107,10 @@ def show_movie_popup(movie_id, movie_title):
             cast_lines = [f"- {c['actor']} as *{c['character']}*" for c in credits["cast"] if c["actor"]]
             st.markdown("\n".join(cast_lines))
 
-        st.markdown("---")
-
         # 4. Director
-        st.markdown(f"**Director:** {credits['director']}")
+            st.markdown(f"**Director:** {credits['director']}")
+
+      ##  st.markdown("---")       
 
         # 5. Overview (Sabse aakhir mein cast ke baad)
         st.markdown("**Overview:**")
