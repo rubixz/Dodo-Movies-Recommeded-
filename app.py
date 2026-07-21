@@ -99,18 +99,18 @@ def show_movie_popup(movie_id, movie_title):
         if details["genres"]:
             st.markdown(f"**Genre:** {', '.join(details['genres'])}")
 
-        st.markdown("---")
+        st.markdown("---")        
 
-        # 3. Director
-        st.markdown(f"**Director:** {credits['director']}")
-
-        # 4. Cast
+        # 3. Cast
         if credits["cast"]:
             st.markdown("**Cast:**")
             cast_lines = [f"- {c['actor']} as *{c['character']}*" for c in credits["cast"] if c["actor"]]
             st.markdown("\n".join(cast_lines))
 
         st.markdown("---")
+
+        # 4. Director
+        st.markdown(f"**Director:** {credits['director']}")
 
         # 5. Overview (Sabse aakhir mein cast ke baad)
         st.markdown("**Overview:**")
@@ -156,13 +156,13 @@ if "rec_ids" in st.session_state:
                 # Poster
                 st.image(rec_posters[i], use_container_width=True)
                 
-                # Title poster ke theek niche (Yellow line wali requirement)
+                # Title 
                 st.markdown(
                     f"<p style='text-align: center; font-weight: 600; font-size: 0.95rem; margin-bottom: 5px; height: 40px; display: flex; align-items: center; justify-content: center;'>{rec_names[i]}</p>", 
                     unsafe_allow_html=True
                 )
                 
-                # Details Button poster ke center me aur width match karte hue (Red line wali requirement)
+                # Details Button 
                 if st.button("ℹ️ Details", key=f"detail_{rec_ids[i]}", use_container_width=True):
                     show_movie_popup(rec_ids[i], rec_names[i])
 
